@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: anestesia
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIiYsHieexGZj5aO48Y3vJFFDTvWLSjSTPFTsWPgvxW anestesia@control-plane
+
+  - name: admin
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2cZBYFv14xcR6E2IeYKcrrOKUX6uxjHh5v4+9Uk6VBpI0A559PhsVJrKixZysg4c+d7L72TYmtBoovXRg8FsDVL/7ZrMVMylQwsV18mSDUtz3OEgd454sZq+NxE4ZW7IXbP0ot142Zb5q5baIQYpQrF8p3CZMkd7FuUkq0Snu6xIR7Dg/EsJVKVsgTSKjBajm8K0/azIEBa3CbL2aJJZGRNLE/8NWJEriRcnF7rg9vJzKqLZ2g2+uaB+xgXjrYi7MhApI3sObbQF41lSckITBOSazBMvFp8uByqp4sUFOLzrjRBVRE+oBA2Bv9s8wV9kinAnSBtj3JvNItsibeusR agapochkina@agapochkina
